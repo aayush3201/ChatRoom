@@ -22,9 +22,9 @@ Exiting abruptly would result in the server crashing. If a client wishes to leav
 before closing the terminal.
 
 # Note
-The binary files in the repository might have been compiled using a newer version of java compliler. If this is the case run the following commands in this order (in the src folder):-
-javac MessageQueue.java
-javac ChatRoomServer.java
-javac ChatRoomClient.java
+The binary files in the repository might have been compiled using a newer version of java compliler. If this is the case run the following commands in this order (in the src folder):-<br />
+javac MessageQueue.java<br />
+javac ChatRoomServer.java<br />
+javac ChatRoomClient.java<br />
 
 Then proceed as above.
