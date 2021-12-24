@@ -1,30 +1,28 @@
 # ChatRoom
-ChatRoom is a software which enables users to group chat via the command line. It has been written entirely using Java.
 
-# How to use?
-Download the files to a new folder.
+ChatRoom is a software which enables users to group chat via the command line.
+It has been written entirely using Java.
 
-Open the command line.
+## Building
 
-Navigate to this folder and then navigate to the src folder.
+```sh
+javac MessageQueue.java
+javac ChatRoomServer.java
+javac ChatRoomClient.java
+```
 
-Type in "java ChatRoomServer" to start the server on the current machine/console.
+## How to use?
 
-Now, other machines/consoles can join this server with the following command (while in the same folder):-
-"java ChatRoomClient x y"
-where x is the hostname of the machine on which the server is running and y is the name the client wishes to join the room under.
+- change current directory to where compiled `.class` files location.
+- `java ChatRoomServer` - to start the server on the current machine.
+- `java ChatRoomClient [server-ip] [username]` - connect to sever with username as `username`
+  - `server-ip` - ip of the computer running the server program
+  - `username` - name of your user
 
-Example: Two devices are connected to the same Wi-fi network and have IP addresses IP1 and IP2 respectively. Suppose you run the server on the PC with IP address IP1. Then, run the client on the other PC using "java ChatRoomClient IP1 name".
-If the PC on which the server is running wants to join chat as well, you can use "java ChatRoomClient localhost name". 
+## TODO
 
-# How to exit?
-Exiting abruptly would result in the server crashing. If a client wishes to leave, he/she must type in "$LEAVE" in the terminal (instead of a message)
-before closing the terminal.
+- [ ] Fix server crashing problem, current if user leaves without using `$LEAVE` it cause server crash.
 
-# Note
-The binary files in the repository might have been compiled using a newer version of java compliler. If this is the case run the following commands in this order (in the src folder):-<br />
-javac MessageQueue.java<br />
-javac ChatRoomServer.java<br />
-javac ChatRoomClient.java<br />
+## License
 
-Then proceed as above.
+MIT
