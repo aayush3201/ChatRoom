@@ -2,6 +2,9 @@
 
 SRC_DIR="./src/Main"
 
+# making realease directory
+mkdir -p release/Main
+
 # compiling
 javac $SRC_DIR/MessageQueue.java -classpath ./src -d release
 javac $SRC_DIR/ChatRoomClient.java -classpath ./src -d release
