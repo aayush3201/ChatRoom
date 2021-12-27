@@ -1,3 +1,5 @@
+package Main;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.HashSet;
@@ -38,7 +40,7 @@ public class ChatRoomClient {
      * Connects to the server whose hostname is mentioned in args[0] under the name
      * mentioned in args[1]
      */
-    public static void main(String args[]) {
+    public static void run(String args[]) {
         try {
             String hostname = args.length > 0 ? args[0] : "localhost";
             String name = args.length > 1 ? args[1] : "";
@@ -112,5 +114,4 @@ public class ChatRoomClient {
         Thread thread = new Thread(new MessageGetter());
         thread.start();
     }
-
 }

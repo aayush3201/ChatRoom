@@ -5,17 +5,15 @@ It has been written entirely using Java.
 
 ## Building
 
-```sh
-javac MessageQueue.java
-javac ChatRoomServer.java
-javac ChatRoomClient.java
-```
+- run `build.sh`
+- the final build will be inside `release` directory.
 
 ## How to use?
 
-- change current directory to where compiled `.class` files location.
-- `java ChatRoomServer` - to start the server on the current machine.
-- `java ChatRoomClient [server-ip] [username]` - connect to sever with username as `username`
+- run `build.sh` to compile and build the `Chat.jar` file
+- change directory to `release`
+- `java -jar Chat.jar server` to start the server on the current machine.
+- `java -jar Chat.jar client [server-ip] [username]` - connect to sever with username as `username`
   - `server-ip` - ip of the computer running the server program
   - `username` - name of your user
 
